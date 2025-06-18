@@ -32,10 +32,10 @@ def load_best_estimator():
 
     import os
     import pickle
-
-    if not os.path.exists("homework/estimator.pickle"):
+    path = os.path.join("homework", "estimator.pickle")
+    if not os.path.exists(path):
         return None
-    with open("homework/estimator.pickle", "rb") as file:
+    with open(path, "rb") as file:
         estimator = pickle.load(file)
 
     return estimator
